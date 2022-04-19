@@ -13,17 +13,33 @@ public class Store {
         }
         System.out.println();
 
-
-
         int indexOfGloves= -1 ;
         for (int i = 0; i < items.length; i++) {
-            if (items[i].equalsIgnoreCase("Gloves")){
-               indexOfGloves = i ;
-               break;
+            if (items[i].equalsIgnoreCase("Gloves")) {
+                indexOfGloves = i;
+                break;
+
             }
-            System.out.println("index of Gloves: " +indexOfGloves );
+        }
+         System.out.println("index of Gloves: " + indexOfGloves);
+
+        double mostExpensive =prices[0];
+        int indexOfMostExpensive=0;
+
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] > mostExpensive){
+
+                mostExpensive= prices[i];
+                indexOfMostExpensive=i;
+            }
 
         }
+        System.out.println("The most expensive item : " );
+        System.out.println("item: " + items[indexOfMostExpensive]);
+        System.out.println("Item ID: " + itemIds[indexOfMostExpensive]);
+        System.out.println("Price $: " + prices[indexOfMostExpensive]);
+
+
 
     }
 }
